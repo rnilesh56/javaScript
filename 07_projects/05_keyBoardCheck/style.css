@@ -1,0 +1,30 @@
+html{
+  background-color: #1c1c1c;
+}
+
+table,
+th,
+td {
+  width: 500px;
+  height: 50px;
+  border: 1px solid #e7e7e7;
+  background-color: #e19898;
+  color: black;
+  padding: 40px;
+}
+
+.project {
+  background-color: #1c1c1c;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding-top: 10rem;
+}
+
+.color {
+  color: aliceblue;
+  display: flex;
+  flex-direction: row;
+}

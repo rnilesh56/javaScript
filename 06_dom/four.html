@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM | FOUR</title>
+  </head>
+  <body style="background-color: #212121; color: white">
+    <ul class="language">
+      <li>JavaScript</li>
+    </ul>
+  </body>
+  <script>
+    // Add
+
+    function addLanuage(langName) {
+      const li = document.createElement("li");
+      li.innerHTML = `${langName}`;
+      document.querySelector(".language").appendChild(li);
+    }
+    addLanuage("Python");
+    addLanuage("Java");
+    addLanuage("TypeScipt");
+
+    function addOptiLanguage(langName) {
+      const li = document.createElement("li");
+      // const addtext = document.createTextNode(langName)
+      // li.appendChild(addtext)
+
+      li.appendChild(document.createTextNode(langName));
+      document.querySelector(".language").appendChild(li);
+    }
+    addOptiLanguage("goLang");
+    addOptiLanguage("CPP");
+
+    // Edit
+    const secondLang = document.querySelector("li:nth-child(2)");
+    // secondLang.innerHTML = "Mojo"
+    const newLi = document.createElement("li");
+    newLi.textContent = "Mojo";
+    secondLang.replaceWith(newLi);
+
+    // Edit
+    const firstLang = document.querySelector("li:first-child");
+    firstLang.outerHTML = "<li>TypeScipt</li>";
+
+    // Remove
+    const lastLang = document.querySelector("li:last-child");
+    lastLang.remove();
+  </script>
+</html>
